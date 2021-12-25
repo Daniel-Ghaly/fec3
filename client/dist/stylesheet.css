@@ -1,0 +1,53 @@
+img {
+  width: 20px;
+}
+
+
+#product-name-overview {
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  font-size: xx-large;
+}
+
+
+#category-overview {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+#reviews-overview {
+  font-size: small;
+  text-decoration: underline;
+  color: #007185;
+}
+
+
+
+
+
+
+
+
+
+img .quarter{
+  height: 75px;
+}
+
+
+.star {
+  display: inline-block;
+  position: relative;
+  font-size: 100px;
+  color: #ddd;
+}
+
+.star::after {
+  font-family: FontAwesome;
+  content: "\f005";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  overflow: hidden;
+  color: #f80;
+}
