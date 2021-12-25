@@ -2,11 +2,28 @@ img {
   width: 20px;
 }
 
+#gray {
+  width: 50px;
+  border-radius: 90%;
+  margin-right: 15px;
+}
+
+#style-container {
+  margin-top: 25px;
+}
+
 
 #product-name-overview {
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   font-size: xx-large;
+}
+
+#selected-style {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: larger;
 }
 
 
