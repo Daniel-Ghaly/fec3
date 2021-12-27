@@ -1,26 +1,40 @@
 import React from 'react';
 import gray from '/Users/danielghaly/Desktop/Hack Reactor/fec3/client/src/components/OverviewComponents/grey-box.png'
+import axios from 'axios'
 
 class StyleSelector extends React.Component {
   constructor(props) {
     super(props);
+
   }
+
+  componentDidMount() {
+
+
+
+  }
+
+  // handleStyleClick(i) {
+  //   var
+  // }
 
   render () {
 
-    var count = 0;
     var output = [];
 
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < this.props.thumbnails.length; i++) {
 
-      output.push(<img id = 'gray' src = {gray} />)
+      var index = i
+      output.push(<img  onClick = {() => {this.props.handleStyleClick(index)}} src = {this.props.thumbnails[i]} />)
     }
 
     return (
       <>
       <div id = 'style-container'>
-      <div id = 'selected-style'>Style: (Selected Style)</div>
-      {output}
+        <div id = 'selected-style'>Style: (Selected Style)</div>
+        <div id = 'img-container'>
+        {output}
+        </div>
       </div>
       </>
     )

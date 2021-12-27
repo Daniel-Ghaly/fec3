@@ -1,5 +1,34 @@
 img {
-  width: 20px;
+  width: 50px;
+	clip-path: circle();
+	display: flex;
+	justify-content: flex-start;
+	margin-right: 5px;
+	border-style: solid;
+	position: relative;
+
+}
+
+
+#checkmark {
+	position: absolute;
+}
+
+
+img::after {
+  content: "Multi-line\00000a text";
+  position: absolute;
+  top: 1px;
+  white-space: pre;
+  right: 1px;
+  font-weight: bold;
+  text-align: right;
+  font-size: 1000px;
+}
+
+#img-container {
+	display: flex;
+	justify-content: flex-start;
 }
 
 #gray {
