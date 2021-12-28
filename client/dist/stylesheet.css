@@ -1,25 +1,45 @@
-img {
-  width: 50px;
-	clip-path: circle();
-	display: flex;
-	justify-content: flex-start;
+.thumbnail-image {
 	margin-right: 5px;
 	border-style: solid;
 	position: relative;
+  display: block;
+  max-width: 100%;
+  clip-path: circle();
 
 }
 
-
-img ::after {
-  font-family: "Font Awesome 5 Free";
+.checkmark {
   position: absolute;
-  font-weight: 900;
+  top: 10%;
+  left: 80%;
+  width:25px;
+}
+
+div #styles-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+div #image-container {
+  position: relative;
+  width: 50px;
+
+
+
+
+}
+
+/* div #image-container ::after {
+  z-index: 2;
+  position: absolute;
   top: 50%;
   left: 50%;
-  content: "f00c";
-  z-index: 2;
+  content: url(https://lh3.googleusercontent.com/proxy/VnKekpthZDmb9CA-8cqw-8vzAmlB3olqarAbbcHJjTbRKnM-gFKtqtCjRtXRseTmUCfrEdooSxgK-hIFWx5pJ7tiaLbMi4Gujute0H0COfYfDk-eNL7S7uKG0y1NlGvaNO6i402Qi_xVbaqEc68mSDP8is3heQ);
 
-}
+
+} */
+
 
 
 #checkmark {
