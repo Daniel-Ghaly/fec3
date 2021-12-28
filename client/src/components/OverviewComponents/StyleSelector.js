@@ -25,7 +25,7 @@ class StyleSelector extends React.Component {
     for (var i = 0; i < this.props.thumbnails.length; i++) {
 
       var index = i
-      output.push(<img  onClick = {() => {this.props.handleStyleClick(index)}} src = {this.props.thumbnails[i]} />)
+      output.push(<img className = 'added'  onClick = {() => {this.props.handleStyleClick(index)}} src = {this.props.thumbnails[i]} />)
     }
 
     return (
