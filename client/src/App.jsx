@@ -79,9 +79,9 @@ class App extends React.Component {
   //     .catch(err => console.error('Error getting relatedItems: ', err))
   // }
 
-  // axiosGet(endpoint) {
-  //   return axios.get(url + endpoint, { headers })
-  // }
+  axiosGet(endpoint) {
+    return axios.get(url + endpoint, { headers })
+  }
 
   render () {
     return (

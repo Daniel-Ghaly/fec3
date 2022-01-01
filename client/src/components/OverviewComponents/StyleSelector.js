@@ -12,6 +12,7 @@ class StyleSelector extends React.Component {
 
   render () {
 
+    console.log('results in style selecotr', this.props.results)
 
     // render thumbnail images of different styles
     var output = [];
@@ -37,7 +38,7 @@ class StyleSelector extends React.Component {
     return (
       <div>
         <div id = 'style-container'>
-          <div id = 'selected-style'>Style: </div>
+          <div id = 'selected-style'>Style: {this.props.results ? this.props.results[Number(this.props.selectedStyle)].name : '' } </div>
           <div id = 'styles-container'>
             {output}
           </div>

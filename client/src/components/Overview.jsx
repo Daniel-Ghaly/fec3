@@ -4,7 +4,6 @@ import Reviews from './OverviewComponents/Reviews.js';
 import axios from 'axios';
 import {token} from '../../../config.js';
 import StyleSelector from './OverviewComponents/StyleSelector.js';
-// import ImageGallery from '/Users/danielghaly/Desktop/Hack Reactor/fec3/client/src/components/OverviewComponents/ImageGallery.js'
 import AddToCart from './OverviewComponents/AddToCart.js';
 import ProductDescription from './OverviewComponents/ProductDescription.js';
 
@@ -78,6 +77,7 @@ class Overview extends React.Component {
       .then(res => {
 
 
+        console.log('results on component did Mount()', res.data.results)
         // maintain styles API results in state, so that I can use it later in lifecycle
         this.setState({results: res.data.results});
 
@@ -190,6 +190,7 @@ class Overview extends React.Component {
 
   render () {
 
+    console.log('results', this.state.results)
 
     return (
       <div>

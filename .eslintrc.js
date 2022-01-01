@@ -1,5 +1,4 @@
 module.exports = {
-<<<<<<< HEAD
   env: {
     'es6': true
   },
@@ -41,7 +40,6 @@ module.exports = {
     'quotes': [1, 'single']
   }
 };
-=======
     "env": {
         "browser": true,
         "es6": true,
@@ -68,4 +66,3 @@ module.exports = {
     "rules": {
     }
 };
->>>>>>> 51c4163b7bfaacc1d8c703a701ed3b6507acbd70
