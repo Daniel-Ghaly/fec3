@@ -1,7 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
-
-
+import {token} from '/config.js';
 
 function StarsTile (props) {
    // eventaully switch to dynamic
@@ -15,7 +13,5 @@ function StarsTile (props) {
       </div>
     </div>
   )
-}
-
 
 export default StarsTile;

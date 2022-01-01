@@ -1,3 +1,10 @@
+// module.exports = {
+//   extends: 'hackreactor',
+//   rules: {
+//     // Rules here will override the 'hackreactor' configuration
+//     // http://eslint.org/docs/rules/
+//   }
+// };
 module.exports = {
   env: {
     'es6': true
@@ -40,6 +47,7 @@ module.exports = {
     'quotes': [1, 'single']
   }
 };
+<<<<<<< HEAD
     "env": {
         "browser": true,
         "es6": true,
@@ -66,3 +74,5 @@ module.exports = {
     "rules": {
     }
 };
+=======
+>>>>>>> main
