@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "FEC Team 3 project",
   "main": "server.js",
+  "engines": {
+    "node": "16.13.0"
+  },
   "scripts": {
     "test": "nodemon server.js",
     "start": "node server.js",
