@@ -1,12 +1,12 @@
 const express = require('express');
-const { url, token } = require('./config.js');
+// const { url, token } = require('./config.js');
 const path = require('path');
 const axios = require('axios');
 const cors = require('cors');
 const app = express();
 
 const headers = {
-  'Authorization': token
+  'Authorization': process.env.token
 };
 
 // Middleware
@@ -18,19 +18,19 @@ app.use(express.urlencoded({ extended: true }));
 
 // ----- HELPER FUNCTIONS ----- //
 const axiosGet = (path, response) => {
-  axios.get(`${url}${path}`, { headers })
+  axios.get(`${process.env.url}${path}`, { headers })
     .then(results => { response.send(results.data); })
     .catch(err => console.error('Error executing Axios GET from API: ', err));
 };
 
 const axiosPut = (path, body, res) => {
-  axios.put(`${url}${path}`, body, { headers })
+  axios.put(`${process.env.url}${path}`, body, { headers })
     .then(() => res.status(204).send(''))
     .catch(err => console.error('Error submitting PUT req (server.js): ', err));
 };
 
 const axiosPost = (path, body, res) => {
-  axios.post(`${url}${path}`, body, { headers })
+  axios.post(`${process.env.url}${path}`, body, { headers })
     .then(() => res.status(201).send('Success'))
     .catch(err => console.error('Error completing POST req (server.js): ', err));
 };
@@ -40,6 +40,7 @@ const axiosPost = (path, body, res) => {
 // ---------- API GET REQUESTS ---------- //
 /* ----- Products ----- */
 app.get('/products', (req, res) => {
+  console.log(process.env.token);
   axiosGet(req.url, res);
 });
 
