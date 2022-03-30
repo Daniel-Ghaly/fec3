@@ -3,7 +3,6 @@ import axios from 'axios';
 import StarsTile from '/client/src/components/RatingsComponents/ReviewsList/StarsTile.jsx';
 import ComparisonModal from './ComparisonModal.jsx';
 import PriceLine from './PriceLine.jsx';
-const { process.env.localhost } = require('/config.js');
 
 const ProductCard = (props) => {
   const item = props.product;
