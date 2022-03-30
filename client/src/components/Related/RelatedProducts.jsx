@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductCard from './ProductCard.jsx';
-const { process.env.localhost } = require('/config.js');
+// const { process.env.localhost } = require('/config.js');
 
 
 const RelatedProducts = (props) => {
