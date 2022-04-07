@@ -5,6 +5,8 @@ const axios = require('axios');
 const cors = require('cors');
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const headers = {
   'Authorization': process.env.token
 };
@@ -124,6 +126,6 @@ app.post('/qa/questions/:question_id/answers', (req, res) => {
 // ---------- END OF POST REQUESTS ---------- //
 
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000...');
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}...`);
 });
