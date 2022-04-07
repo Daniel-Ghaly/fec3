@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
-const { localhost } = require('/config.js');
-
+const { localhost } = require('../../../../config.js');
 function NewReviewForm ({factors, productName, closeModalOnSubmit, characteristics, product_Id, reviewsCount, setReviewsCount}) {
   const factorGrades = {
     'Size': ['A size too small', '1/2 size too small', 'Perfect', '1/2 size too big', 'A size too wide'],

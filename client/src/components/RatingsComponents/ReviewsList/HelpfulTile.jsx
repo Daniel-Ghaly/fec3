@@ -1,8 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
-const { localhost } = require('/config.js');
-
+const { localhost } = require('../../../../config.js');
 function HelpfulTile ({helpfulnessCount, reviewId, setReviewsCount}) {
   const [yesCount, setYesCount] = useState(helpfulnessCount);
   const [yesClicked, setYesClicked] = useState(false);

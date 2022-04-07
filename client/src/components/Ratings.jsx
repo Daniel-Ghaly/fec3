@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import ReviewsSidebar from './RatingsComponents/ReviewsSidebar/ReviewsSidebar.jsx';
 import ReviewsList from '../components/RatingsComponents/ReviewsList/ReviewsList.jsx';
-const { localhost } = require('/config.js');
-
+const { localhost } = require('../../../../config.js');
 function Ratings ({product_Id, productName}) {
   const [productReviews, setProductReviews] = useState({});
   const [sort, setSort] = useState('relevant');
