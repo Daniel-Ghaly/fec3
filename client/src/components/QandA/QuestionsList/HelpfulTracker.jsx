@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const { localhost } = require('../../../../config.js');
+const { localhost } = require('../../../../../config.js');
 const HelpfulTracker = ({ questionOrAnswer_id, helpful, usage, reported }) => {
   const [yesCount, setYesCount] = useState(helpful);
   const [yesClicked, setYesClicked] = useState(false);

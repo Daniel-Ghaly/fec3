@@ -5,7 +5,7 @@ import AverageRating from './AverageRating.jsx';
 import PercentRecommended from './PercentRecommended.jsx';
 import RatingBreakdown from './RatingBreakdown.jsx';
 import RatingFactors from './RatingFactors.jsx';
-// const { localhost } = require('../../../../config.js');
+const { localhost } = require('../../../../../config.js');
 function ReviewsSidebar ({productId, starsClicked, setStarsClicked, reviewsCount, reviews}) {
   const [productMetaData, setProductMetaData] = useState({});
 

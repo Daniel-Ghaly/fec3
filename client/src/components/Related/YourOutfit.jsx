@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import OutfitCard from './OutfitCard.jsx';
-// const { localhost } = require('../../../../config.js');
+const { localhost } = require('../../../../config.js');
 const YourOutfit = (props) => {
 
   const outfit = props.outfit;
