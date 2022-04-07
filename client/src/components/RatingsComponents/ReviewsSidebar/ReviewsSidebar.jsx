@@ -5,13 +5,13 @@ import AverageRating from './AverageRating.jsx';
 import PercentRecommended from './PercentRecommended.jsx';
 import RatingBreakdown from './RatingBreakdown.jsx';
 import RatingFactors from './RatingFactors.jsx';
-// const { process.env.localhost } = require('/config.js');
+// const { localhost } = require('/config.js');
 
 function ReviewsSidebar ({productId, starsClicked, setStarsClicked, reviewsCount, reviews}) {
   const [productMetaData, setProductMetaData] = useState({});
 
   useEffect(() => {
-    const url = `${process.env.localhost}/reviews/meta`;
+    const url = `${localhost}/reviews/meta`;
     const params = {product_id: productId};
 
     const fetchMeta = async () => {

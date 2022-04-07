@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
-// const { process.env.process.env.localhost } = require('/config.js');
+const { localhost } = require('/config.js');
 
 function HelpfulTile ({helpfulnessCount, reviewId, setReviewsCount}) {
   const [yesCount, setYesCount] = useState(helpfulnessCount);
@@ -13,7 +13,7 @@ function HelpfulTile ({helpfulnessCount, reviewId, setReviewsCount}) {
     const body = {
       'helpfulness': yesCount
     };
-    Axios.put(`${process.env.process.env.localhost}/reviews/${reviewId}/helpful`, body, {
+    Axios.put(`${localhost}/reviews/${reviewId}/helpful`, body, {
       params: {
         review_id: reviewId
       }
@@ -22,7 +22,7 @@ function HelpfulTile ({helpfulnessCount, reviewId, setReviewsCount}) {
   };
 
   const handleReported = () => {
-    Axios.put(`${process.env.process.env.localhost}/reviews/${reviewId}/report`, {}, { params: { review_id: reviewId }})
+    Axios.put(`${localhost}/reviews/${reviewId}/report`, {}, { params: { review_id: reviewId }})
       .then(() => console.log('you have reported review # ', reviewId))
       .catch((err) => console.log('error reporting review', err));
     setReviewsCount(prevState => prevState - 1);

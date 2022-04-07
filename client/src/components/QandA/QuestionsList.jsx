@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import QuestionCard from './QuestionsList/QuestionCard.jsx';
 import AddQuestionOrAnswer from './QuestionsList/QuestionCard/AddQuestionOrAnswer.jsx';
-// const { process.env.localhost } = require('/config.js');
+const { localhost } = require('/config.js');
 
 class QuestionsList extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class QuestionsList extends React.Component {
   }
 
   getAllQuestions() {
-    axios.get(`${process.env.process.env.localhost}/qa/questions`, {params: { product_id: this.props.product_id, count: 50 }})
+    axios.get(`${localhost}/qa/questions`, {params: { product_id: this.props.product_id, count: 50 }})
       .then(returnedQuestions => {
         this.setState({
           questions: returnedQuestions.data.results,

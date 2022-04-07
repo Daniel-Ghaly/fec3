@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import OutfitCard from './OutfitCard.jsx';
-// const { process.env.localhost } = require('/config.js');
+// const { localhost } = require('/config.js');
 
 const YourOutfit = (props) => {
 
@@ -9,7 +9,7 @@ const YourOutfit = (props) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(`${process.env.localhost}/products/`)
+    axios.get(`${localhost}/products/`)
       .then(products => products.data.filter(product => outfit.includes(product.id)))
       .then(filteredProducts => setProducts(filteredProducts));
   }, []);

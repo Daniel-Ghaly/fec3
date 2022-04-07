@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import ReactDom from 'react-dom';
 import axios from 'axios';
-// const { process.env.localhost } = require('/config.js');
+const { localhost } = require('/config.js');
 
 const cloudinary_name = 'flightfulkiwi';
 const cloudinary_url = 'https://api.cloudinary.com/v1_1/flightfulkiwi/image/upload';
@@ -113,7 +113,7 @@ const Modal = ({ setShowModal, usage, product_name, questionOrProduct_id, onAorQ
     }
 
     try {
-      const postReq = await axios.post(process.env.process.env.localhostHost + endpoint, body);
+      const postReq = await axios.post(localhost + endpoint, body);
       onAorQAddition();
       // setShowModal(false);
     } catch (err) {
