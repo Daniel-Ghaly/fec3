@@ -8,7 +8,7 @@ bin-release/
 .settings/
 node_modules
 bundle.js
-config.js
+# config.js
 env.js
 .env
 # Executables
@@ -18,7 +18,7 @@ env.js
 *.apk
 
 # Security
-config.js
+# config.js
 bundle.js*
 .env
 
@@ -26,7 +26,7 @@ bundle.js*
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 
-config.js
+# config.js
 client/dist/bundle.js
 bundle.js
 client/dist/bundle.js.LICENSE.txt:
