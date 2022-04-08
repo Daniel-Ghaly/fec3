@@ -9,8 +9,8 @@ module.exports = {
 
 
   plugins: [
-    new DefinePlugin({
-      'process.env': JSON.stringify(process.env),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     })
   ],
   entry: `${SRC_DIR}/index.js`,
