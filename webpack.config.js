@@ -7,7 +7,7 @@ const webpack = require('webpack');
 module.exports = {
 
   plugins: [
-    new webpack.EnvironmentPlugin(['NODE_ENV'])
+    new webpack.EnvironmentPlugin( { ...process.env } )
   ],
   entry: `${SRC_DIR}/index.js`,
   output: {
