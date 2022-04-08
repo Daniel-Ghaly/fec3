@@ -1,5 +1,5 @@
 const express = require('express');
-// const { url, token } = require('./config.js');
+const { url, token } = require('./config.js');
 const path = require('path');
 const axios = require('axios');
 const cors = require('cors');

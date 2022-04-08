@@ -8,7 +8,7 @@ import ProductDescription from './OverviewComponents/ProductDescription.jsx';
 import ImageGallery from './OverviewComponents/ImageGallery.jsx';
 import MainImage from './OverviewComponents/MainImage.jsx';
 import ExpandedView from './OverviewComponents/ExpandedView.jsx';
-const { localhost } = require('./../../../config.js');
+const { localhost } = require('/config.js');
 class Overview extends React.Component {
   constructor(props) {
     super(props);
