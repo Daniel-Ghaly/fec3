@@ -6,6 +6,9 @@ import Related from './components/Related.jsx';
 import QandA from './components/QandA.jsx';
 import axios from 'axios';
 const { localhost } = require('./../../config.js');
+
+
+
 const findId = (element) => {
   let id;
   let moduleIds = {

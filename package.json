@@ -9,7 +9,7 @@
   "scripts": {
     "test": "nodemon server.js",
     "start": "node server.js",
-    "build": "webpack --config webpack.config.js --mode production",
+    "build": "webpack --config webpack.config.js --mode production --env token=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 --env url=https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp --env localhost=http://127.0.0.1:3000 ",
     "react-dev": "webpack --config webpack.config.js --mode development -w",
     "heroku-postbuild": "npm run build"
   },
