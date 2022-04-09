@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const { localhost } = require('../../../../../config.js');
+const { port } = require('../../../../../config.js');
 
 const HelpfulTracker = ({ questionOrAnswer_id, helpful, usage, reported }) => {
   const [yesCount, setYesCount] = useState(helpful);
@@ -9,7 +9,7 @@ const HelpfulTracker = ({ questionOrAnswer_id, helpful, usage, reported }) => {
   const [reportClicked, setReportClicked] = useState(reported);
 
   const updateYesOrReport = (endpoint, body) => {
-    axios.put(localhost + `:${port}` + endpoint, body)
+    axios.put(`http://localhost:${port}` + endpoint, body)
       .catch(err => console.error('Error submitting PUT req (HelpfulTracker.jsx): ', err));
   };
 

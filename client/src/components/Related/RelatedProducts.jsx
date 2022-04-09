@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductCard from './ProductCard.jsx';
-const { localhost, port} = require('../../../../config.js');
+const { port} = require('../../../../config.js');
 
 const RelatedProducts = (props) => {
 
@@ -12,14 +12,14 @@ const RelatedProducts = (props) => {
   // setProductId(product_Id_upstream);
 
   useEffect(() =>{
-    axios.get(`${localhost}:${port}/products/${productId}/related`)
+    axios.get(`http://localhost:${port}/products/${productId}/related`)
       .then(res => {
-        axios.get(`${localhost}:${port}/products/`)
+        axios.get(`http://localhost:${port}/products/`)
           .then(products => products.data.filter(product => res.data.includes(product.id)))
           .then(filteredProducts => setProducts(filteredProducts));
       })
       .then(() => {
-        axios.get(`${localhost}:${port}/products/${productId}`)
+        axios.get(`http://localhost:${port}/products/${productId}`)
           .then((res) => {
             setMainFeatures(res.data.features);
           });

@@ -5,7 +5,7 @@ import Ratings from './components/Ratings.jsx';
 import Related from './components/Related.jsx';
 import QandA from './components/QandA.jsx';
 import axios from 'axios';
-const { localhost, port } = require('./../../config.js');
+const { port } = require('./../../config.js');
 
 
 const findId = (element) => {
@@ -80,8 +80,7 @@ class App extends React.Component {
       };
       // console.log('this is your click event', body);
 
-      console.log(port);
-      axios.post(`${localhost}:${port}/interactions`, body)
+      axios.post(`http://localhost:${port}/interactions`, body)
         .catch((err) => console.error('this is the interactions error', err));
 
     });
