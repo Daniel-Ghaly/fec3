@@ -15,7 +15,7 @@ module.exports = (env) => {
           // 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
           'process.env.token': JSON.stringify(process.env.token || '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'),
           'process.env.url': JSON.stringify(process.env.url || 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp'),
-          // 'process.env.PORT': JSON.stringify(process.env.PORT)
+          'process.env.PORT': JSON.stringify(process.env.PORT)
         })
       ],
       entry: `${SRC_DIR}/index.js`,
