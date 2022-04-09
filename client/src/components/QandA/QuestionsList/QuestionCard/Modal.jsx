@@ -5,7 +5,6 @@ const { localhost, port } = require('../../../../../../config.js');
 const cloudinary_name = 'flightfulkiwi';
 const cloudinary_url = 'https://api.cloudinary.com/v1_1/flightfulkiwi/image/upload';
 const cloudinary_preset = 'fec_preset';
-const port = .env.PORT || 80;
 
 let title;
 let title_body;
