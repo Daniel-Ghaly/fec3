@@ -65,6 +65,8 @@ class App extends React.Component {
   }
 
   render () {
+    console.log('client port', port);
+
     window.addEventListener('click', function (e) {
       let element;
       if (e.target.parentNode === null) {
@@ -84,6 +86,7 @@ class App extends React.Component {
         .catch((err) => console.error('this is the interactions error', err));
 
     });
+
 
     return (
       <div>
