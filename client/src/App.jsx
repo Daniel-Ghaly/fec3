@@ -80,6 +80,7 @@ class App extends React.Component {
       };
       // console.log('this is your click event', body);
 
+      console.log(port);
       axios.post(`${localhost}:${port}/interactions`, body)
         .catch((err) => console.error('this is the interactions error', err));
 
