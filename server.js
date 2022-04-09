@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 const { port } = require('./config.js');
-
+console.log(port);
 const headers = {
   'Authorization': process.env.token
 };
