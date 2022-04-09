@@ -12,14 +12,14 @@ const RelatedProducts = (props) => {
   // setProductId(product_Id_upstream);
 
   useEffect(() =>{
-    axios.get(`http://localhost:3000/products/${productId}/related`)
+    axios.get(`http://localhost:${port}/products/${productId}/related`)
       .then(res => {
-        axios.get(`http://localhost:3000/products/`)
+        axios.get(`http://localhost:${port}/products/`)
           .then(products => products.data.filter(product => res.data.includes(product.id)))
           .then(filteredProducts => setProducts(filteredProducts));
       })
       .then(() => {
-        axios.get(`http://localhost:3000/products/${productId}`)
+        axios.get(`http://localhost:${port}/products/${productId}`)
           .then((res) => {
             setMainFeatures(res.data.features);
           });

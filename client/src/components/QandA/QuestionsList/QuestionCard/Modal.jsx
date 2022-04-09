@@ -112,7 +112,7 @@ const Modal = ({ setShowModal, usage, product_name, questionOrProduct_id, onAorQ
     }
 
     try {
-      const postReq = await axios.post(`http://localhost:3000` + endpoint, body);
+      const postReq = await axios.post(`http://localhost:${port}` + endpoint, body);
       onAorQAddition();
       // setShowModal(false);
     } catch (err) {
