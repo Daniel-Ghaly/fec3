@@ -1,5 +1,5 @@
 module.exports = {
   token: process.env.token,
   url: process.env.url,
-  port: 40781
+  port: process.env.PORT || 3000
 };
