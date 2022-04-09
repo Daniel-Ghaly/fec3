@@ -5,7 +5,7 @@ import Ratings from './components/Ratings.jsx';
 import Related from './components/Related.jsx';
 import QandA from './components/QandA.jsx';
 import axios from 'axios';
-const { port } = require('./../../config.js');
+var { port } = require('./../../config.js');
 
 
 const findId = (element) => {
@@ -67,10 +67,11 @@ class App extends React.Component {
 
   render () {
 
-    let that = this;
-    setTimeout(()=> {
-      that.forceUpdate();
-    }, 500);
+    // let that = this;
+    // setTimeout(()=> {
+    //   port =
+    //   that.forceUpdate();
+    // }, 500);
     console.log('client port', port);
 
     window.addEventListener('click', function (e) {
