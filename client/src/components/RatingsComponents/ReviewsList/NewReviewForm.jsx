@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 const { localhost } = require('../../../../../config.js');
+const port = process.env.PORT || 80;
+
 function NewReviewForm ({factors, productName, closeModalOnSubmit, characteristics, product_Id, reviewsCount, setReviewsCount}) {
   const factorGrades = {
     'Size': ['A size too small', '1/2 size too small', 'Perfect', '1/2 size too big', 'A size too wide'],
@@ -77,7 +79,7 @@ function NewReviewForm ({factors, productName, closeModalOnSubmit, characteristi
       characteristics: characters
     };
 
-    Axios.post(`${localhost}/reviews`, body)
+    Axios.post(`${localhost}:${port}/reviews`, body)
       .then((response) => {
         setReviewsCount(prevState => prevState + 1);
       })

@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import OutfitCard from './OutfitCard.jsx';
 const { localhost } = require('./../../../../config.js');
+const port = process.env.PORT || 80;
+
 const YourOutfit = (props) => {
 
   const outfit = props.outfit;

@@ -4,6 +4,8 @@ import Axios from 'axios';
 import ReviewsSidebar from './RatingsComponents/ReviewsSidebar/ReviewsSidebar.jsx';
 import ReviewsList from '../components/RatingsComponents/ReviewsList/ReviewsList.jsx';
 const { localhost } = require('./../../../config.js');
+const port = process.env.PORT || 80;
+
 function Ratings ({product_Id, productName}) {
   const [productReviews, setProductReviews] = useState({});
   const [sort, setSort] = useState('relevant');
@@ -21,7 +23,7 @@ function Ratings ({product_Id, productName}) {
 
 
   useEffect(() => {
-    const url = `${localhost}/reviews`;
+    const url = `${localhost}:${port}/reviews`;
     const params = {product_id: product_Id, count: 50, sort: sort};
     const fetchReviews = async () => {
       const getReviews = await Axios.get(url, {
@@ -38,7 +40,7 @@ function Ratings ({product_Id, productName}) {
   const [factors, setFactors] = useState([]);
 
   useEffect(() => {
-    const url = `${localhost}/reviews/meta`;
+    const url = `${localhost}:${port}/reviews/meta`;
     const params = {product_id: product_Id};
 
     const fetchMeta = async () => {

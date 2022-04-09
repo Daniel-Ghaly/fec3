@@ -3,6 +3,8 @@ import axios from 'axios';
 import StarsTile from '/client/src/components/RatingsComponents/ReviewsList/StarsTile.jsx';
 import PriceLine from './PriceLine.jsx';
 const { localhost } = require('../../../../config.js');
+const port = process.env.PORT || 80;
+
 const ProductCard = (props) => {
   const item = props.product;
   const [defaultStyle, setDefaultStyle] = useState({});
@@ -18,7 +20,7 @@ const ProductCard = (props) => {
     }
   };
   useEffect(() => {
-    axios.get(`${localhost}/products/${item.id}/styles`)
+    axios.get(`${localhost}:${port}/products/${item.id}/styles`)
       .then(res => {
         let styles = res.data.results;
         const [style] = styles.filter(style => style['default?'] === true);
@@ -38,7 +40,7 @@ const ProductCard = (props) => {
           });
       })
       .then(() => {
-        axios.get(`${localhost}/products/${item.id}`)
+        axios.get(`${localhost}:${port}/products/${item.id}`)
           .then(res => setFeatures(res.data.features));
       });
   }, []);

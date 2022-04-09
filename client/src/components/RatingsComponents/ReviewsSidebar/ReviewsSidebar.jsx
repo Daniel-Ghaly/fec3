@@ -6,11 +6,13 @@ import PercentRecommended from './PercentRecommended.jsx';
 import RatingBreakdown from './RatingBreakdown.jsx';
 import RatingFactors from './RatingFactors.jsx';
 const { localhost } = require('../../../../../config.js');
+const port = process.env.PORT || 80;
+
 function ReviewsSidebar ({productId, starsClicked, setStarsClicked, reviewsCount, reviews}) {
   const [productMetaData, setProductMetaData] = useState({});
 
   useEffect(() => {
-    const url = `${localhost}/reviews/meta`;
+    const url = `${localhost}:${port}/reviews/meta`;
     const params = {product_id: productId};
 
     const fetchMeta = async () => {

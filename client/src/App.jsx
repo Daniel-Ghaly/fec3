@@ -6,7 +6,7 @@ import Related from './components/Related.jsx';
 import QandA from './components/QandA.jsx';
 import axios from 'axios';
 const { localhost } = require('./../../config.js');
-
+const port = process.env.PORT || 80;
 
 
 const findId = (element) => {
@@ -81,7 +81,7 @@ class App extends React.Component {
       };
       // console.log('this is your click event', body);
 
-      axios.post(`${localhost}/interactions`, body)
+      axios.post(`${localhost}:${port}/interactions`, body)
         .catch((err) => console.error('this is the interactions error', err));
 
     });

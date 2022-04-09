@@ -3,6 +3,7 @@ import axios from 'axios';
 import QuestionCard from './QuestionsList/QuestionCard.jsx';
 import AddQuestionOrAnswer from './QuestionsList/QuestionCard/AddQuestionOrAnswer.jsx';
 const { localhost } = require('./../../../../config.js');
+const port = process.env.PORT || 80;
 
 class QuestionsList extends React.Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class QuestionsList extends React.Component {
   }
 
   getAllQuestions() {
-    axios.get(`${localhost}/qa/questions`, {params: { product_id: this.props.product_id, count: 50 }})
+    axios.get(`${localhost}:${port}/qa/questions`, {params: { product_id: this.props.product_id, count: 50 }})
       .then(returnedQuestions => {
         this.setState({
           questions: returnedQuestions.data.results,
