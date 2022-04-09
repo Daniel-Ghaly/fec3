@@ -11,7 +11,13 @@ module.exports = (env) => {
     {
       plugins: [
         new webpack.DefinePlugin({
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+          // 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+          'process.env.token': JSON.stringify(process.env.token || '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'),
+          'process.env.url': JSON.stringify(process.env.url || 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp'),
+          'process.env.localhost': JSON.stringify(process.env.localhost || 'http://127.0.0.1:3000'),
+
+
+
         })
       ],
       entry: `${SRC_DIR}/index.js`,
