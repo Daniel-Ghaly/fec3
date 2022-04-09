@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import ReviewsSidebar from './RatingsComponents/ReviewsSidebar/ReviewsSidebar.jsx';
 import ReviewsList from '../components/RatingsComponents/ReviewsList/ReviewsList.jsx';
-const { localhost } = require('./../../../config.js');
-const port = process.env.PORT || 80;
+const { localhost, port } = require('./../../../config.js');
 
 function Ratings ({product_Id, productName}) {
   const [productReviews, setProductReviews] = useState({});

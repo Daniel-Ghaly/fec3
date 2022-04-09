@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
-const { localhost } = require('../../../../../config.js');
-const port = process.env.PORT || 80;
+const { localhost, port } = require('../../../../../config.js');
 
 function NewReviewForm ({factors, productName, closeModalOnSubmit, characteristics, product_Id, reviewsCount, setReviewsCount}) {
   const factorGrades = {

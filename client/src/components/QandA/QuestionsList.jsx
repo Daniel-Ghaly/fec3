@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import QuestionCard from './QuestionsList/QuestionCard.jsx';
 import AddQuestionOrAnswer from './QuestionsList/QuestionCard/AddQuestionOrAnswer.jsx';
-const { localhost } = require('./../../../../config.js');
-const port = process.env.PORT || 80;
+const { localhost, port } = require('./../../../../config.js');
 
 class QuestionsList extends React.Component {
   constructor(props) {

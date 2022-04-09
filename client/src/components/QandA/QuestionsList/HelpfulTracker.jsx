@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 const { localhost } = require('../../../../../config.js');
-const port = process.env.PORT || 80;
 
 const HelpfulTracker = ({ questionOrAnswer_id, helpful, usage, reported }) => {
   const [yesCount, setYesCount] = useState(helpful);

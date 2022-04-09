@@ -5,8 +5,7 @@ import AverageRating from './AverageRating.jsx';
 import PercentRecommended from './PercentRecommended.jsx';
 import RatingBreakdown from './RatingBreakdown.jsx';
 import RatingFactors from './RatingFactors.jsx';
-const { localhost } = require('../../../../../config.js');
-const port = process.env.PORT || 80;
+const { localhost, port } = require('../../../../../config.js');
 
 function ReviewsSidebar ({productId, starsClicked, setStarsClicked, reviewsCount, reviews}) {
   const [productMetaData, setProductMetaData] = useState({});

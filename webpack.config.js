@@ -17,8 +17,6 @@ module.exports = (env) => {
           'process.env.url': JSON.stringify(process.env.url || 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp'),
           'process.env.localhost': JSON.stringify(`http://127.0.0.1:${port}`),
 
-
-
         })
       ],
       entry: `${SRC_DIR}/index.js`,

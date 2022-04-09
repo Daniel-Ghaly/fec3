@@ -2,8 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import StarsTile from '/client/src/components/RatingsComponents/ReviewsList/StarsTile.jsx';
 import PriceLine from './PriceLine.jsx';
-const { localhost } = require('../../../../config.js');
-const port = process.env.PORT || 80;
+const { localhost, port } = require('../../../../config.js');
 
 const ProductCard = (props) => {
   const item = props.product;
