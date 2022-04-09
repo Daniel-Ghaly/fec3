@@ -51,6 +51,7 @@ class App extends React.Component {
     this.relatedClickHandler = this.relatedClickHandler.bind(this);
   }
 
+
   handleProductNameChange (name) {
     this.setState({product_name: name});
   }
@@ -65,6 +66,11 @@ class App extends React.Component {
   }
 
   render () {
+
+    let that = this;
+    setTimeout(()=> {
+      that.forceUpdate();
+    }, 500);
     console.log('client port', port);
 
     window.addEventListener('click', function (e) {
