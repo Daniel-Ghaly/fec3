@@ -16,6 +16,7 @@ module.exports = (env) => {
           'process.env.token': JSON.stringify(process.env.token || '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'),
           'process.env.url': JSON.stringify(process.env.url || 'https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfp'),
           'process.env.localhost': JSON.stringify(`http://127.0.0.1:${port}`),
+          'process.env.PORT': JSON.stringify(process.env.PORT)
 
         })
       ],
