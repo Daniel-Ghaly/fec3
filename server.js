@@ -127,5 +127,5 @@ app.post('/qa/questions/:question_id/answers', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}...`);
+  console.log(`Server listening on port 3000...`);
 });

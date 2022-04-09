@@ -9,7 +9,7 @@ const YourOutfit = (props) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:${port}/products/`)
+    axios.get(`http://localhost:3000/products/`)
       .then(products => products.data.filter(product => outfit.includes(product.id)))
       .then(filteredProducts => setProducts(filteredProducts));
   }, []);

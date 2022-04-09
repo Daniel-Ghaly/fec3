@@ -39,7 +39,7 @@ class Overview extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:${port}/reviews`, { params: { product_id: this.props.product_Id }})
+    axios.get(`http://localhost:3000/reviews`, { params: { product_id: this.props.product_Id }})
       .then(res => {
         this.setState({numberOfReviews: res.data.results.length});
 
@@ -51,7 +51,7 @@ class Overview extends React.Component {
         this.setState({rating: rating});
       });
 
-    axios.get(`http://localhost:${port}/products/${this.props.product_Id}`)
+    axios.get(`http://localhost:3000/products/${this.props.product_Id}`)
       .then(res => {
         this.setState({productName: res.data.name});
         this.setState({productCategory: res.data.category});
@@ -61,7 +61,7 @@ class Overview extends React.Component {
 
       });
 
-    axios.get(`http://localhost:${port}/products/${this.props.product_Id}/styles`)
+    axios.get(`http://localhost:3000/products/${this.props.product_Id}/styles`)
       .then(res => {
         // maintain styles API results in state, so that I can use it later in lifecycle
         this.setState({results: res.data.results});
@@ -108,7 +108,7 @@ class Overview extends React.Component {
   }
 
   componentWillReceiveProps() {
-    axios.get(`http://localhost:${port}/reviews`, { params: { product_id: this.props.product_Id }})
+    axios.get(`http://localhost:3000/reviews`, { params: { product_id: this.props.product_Id }})
       .then(res => {
         this.setState({numberOfReviews: res.data.results.length});
 
@@ -120,7 +120,7 @@ class Overview extends React.Component {
         this.setState({rating: rating});
       });
 
-    axios.get(`http://localhost:${port}/products/${this.props.product_Id}`)
+    axios.get(`http://localhost:3000/products/${this.props.product_Id}`)
       .then(res => {
         this.setState({productName: res.data.name});
         this.setState({productCategory: res.data.category});
@@ -130,7 +130,7 @@ class Overview extends React.Component {
 
       });
 
-    axios.get(`http://localhost:${port}/products/${this.props.product_Id}/styles`)
+    axios.get(`http://localhost:3000/products/${this.props.product_Id}/styles`)
       .then(res => {
         // maintain styles API results in state, so that I can use it later in lifecycle
         this.setState({results: res.data.results});
