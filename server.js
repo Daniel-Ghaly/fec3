@@ -5,7 +5,7 @@ const axios = require('axios');
 const cors = require('cors');
 const app = express();
 
-const port = process.env.PORT || ${port};
+const { port } = require('./config.js');
 
 const headers = {
   'Authorization': process.env.token

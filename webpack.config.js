@@ -7,7 +7,6 @@ const webpack = require('webpack');
 
 module.exports = (env) => {
 
-  const port = process.env.PORT || ${port};
   return (
     {
       plugins: [
