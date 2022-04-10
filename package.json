@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "nodemon server.js",
-    "server": "node server.js",
-    "build": "webpack --config webpack.config.js --mode production",
+    "build": "node server.js",
+    "build2": "webpack --config webpack.config.js --mode production",
     "react-dev": "webpack --config webpack.config.js --mode development -w",
     "heroku-postbuild": "npm run build"
   },
