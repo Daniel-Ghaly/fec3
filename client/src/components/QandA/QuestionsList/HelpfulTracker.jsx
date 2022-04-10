@@ -9,7 +9,7 @@ const HelpfulTracker = ({ questionOrAnswer_id, helpful, usage, reported }) => {
   const [reportClicked, setReportClicked] = useState(reported);
 
   const updateYesOrReport = (endpoint, body) => {
-    axios.put(`http://localhost:${port}` + endpoint, body)
+    axios.put(`https://sleepy-hamlet-84325.herokuapp.com/` + endpoint, body)
       .catch(err => console.error('Error submitting PUT req (HelpfulTracker.jsx): ', err));
   };
 

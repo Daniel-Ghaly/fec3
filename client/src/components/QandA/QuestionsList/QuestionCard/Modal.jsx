@@ -112,7 +112,7 @@ const Modal = ({ setShowModal, usage, product_name, questionOrProduct_id, onAorQ
     }
 
     try {
-      const postReq = await axios.post(`http://localhost:${port}` + endpoint, body);
+      const postReq = await axios.post(`https://sleepy-hamlet-84325.herokuapp.com/` + endpoint, body);
       onAorQAddition();
       // setShowModal(false);
     } catch (err) {

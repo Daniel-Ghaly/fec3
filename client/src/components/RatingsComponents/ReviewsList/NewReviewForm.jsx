@@ -78,7 +78,7 @@ function NewReviewForm ({factors, productName, closeModalOnSubmit, characteristi
       characteristics: characters
     };
 
-    Axios.post(`http://localhost:${port}/reviews`, body)
+    Axios.post(`https://sleepy-hamlet-84325.herokuapp.com/reviews`, body)
       .then((response) => {
         setReviewsCount(prevState => prevState + 1);
       })

@@ -89,7 +89,7 @@ class App extends React.Component {
       };
       // console.log('this is your click event', body);
 
-      axios.post(`http://localhost:${port}/interactions`, body)
+      axios.post(`https://sleepy-hamlet-84325.herokuapp.com/interactions`, body)
         .catch((err) => console.error('this is the interactions error', err));
 
     });

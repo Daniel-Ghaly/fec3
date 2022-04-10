@@ -20,14 +20,14 @@ const ProductCard = (props) => {
     }
   };
   useEffect(() => {
-    axios.get(`http://localhost:${port}/products/${item.id}/styles`)
+    axios.get(`https://sleepy-hamlet-84325.herokuapp.com/products/${item.id}/styles`)
       .then(res => {
         let styles = res.data.results;
         const [style] = styles.filter(style => style['default?'] === true);
         setDefaultStyle(style);
       })
       .then(() => {
-        axios.get(`http://localhost:${port}/reviews/meta?product_id=${item.id}`)
+        axios.get(`https://sleepy-hamlet-84325.herokuapp.com/reviews/meta?product_id=${item.id}`)
           .then(res => {
             const ratings = res.data.ratings;
             let [score, reviews] = [0, 0];
@@ -40,7 +40,7 @@ const ProductCard = (props) => {
           });
       })
       .then(() => {
-        axios.get(`http://localhost:${port}/products/${item.id}`)
+        axios.get(`https://sleepy-hamlet-84325.herokuapp.com/products/${item.id}`)
           .then(res => setFeatures(res.data.features));
       });
   }, []);

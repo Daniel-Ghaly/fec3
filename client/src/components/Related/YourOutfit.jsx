@@ -9,7 +9,7 @@ const YourOutfit = (props) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:${port}/products/`)
+    axios.get(`https://sleepy-hamlet-84325.herokuapp.com/products/`)
       .then(products => products.data.filter(product => outfit.includes(product.id)))
       .then(filteredProducts => setProducts(filteredProducts));
   }, []);

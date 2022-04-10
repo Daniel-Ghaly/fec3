@@ -11,7 +11,7 @@ function ReviewsSidebar ({productId, starsClicked, setStarsClicked, reviewsCount
   const [productMetaData, setProductMetaData] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:${port}/reviews/meta`;
+    const url = `https://sleepy-hamlet-84325.herokuapp.com/reviews/meta`;
     const params = {product_id: productId};
 
     const fetchMeta = async () => {

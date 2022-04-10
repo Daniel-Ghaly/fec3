@@ -18,7 +18,7 @@ class QuestionsList extends React.Component {
   }
 
   getAllQuestions() {
-    axios.get(`http://localhost:${port}/qa/questions`, {params: { product_id: this.props.product_id, count: 50 }})
+    axios.get(`https://sleepy-hamlet-84325.herokuapp.com/qa/questions`, {params: { product_id: this.props.product_id, count: 50 }})
       .then(returnedQuestions => {
         this.setState({
           questions: returnedQuestions.data.results,

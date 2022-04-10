@@ -12,7 +12,7 @@ function HelpfulTile ({helpfulnessCount, reviewId, setReviewsCount}) {
     const body = {
       'helpfulness': yesCount
     };
-    Axios.put(`http://localhost:${port}/reviews/${reviewId}/helpful`, body, {
+    Axios.put(`https://sleepy-hamlet-84325.herokuapp.com/reviews/${reviewId}/helpful`, body, {
       params: {
         review_id: reviewId
       }
@@ -21,7 +21,7 @@ function HelpfulTile ({helpfulnessCount, reviewId, setReviewsCount}) {
   };
 
   const handleReported = () => {
-    Axios.put(`http://localhost:${port}/reviews/${reviewId}/report`, {}, { params: { review_id: reviewId }})
+    Axios.put(`https://sleepy-hamlet-84325.herokuapp.com/reviews/${reviewId}/report`, {}, { params: { review_id: reviewId }})
       .then(() => console.log('you have reported review # ', reviewId))
       .catch((err) => console.log('error reporting review', err));
     setReviewsCount(prevState => prevState - 1);
